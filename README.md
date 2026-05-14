@@ -1,4 +1,5 @@
-Landing Page To' Ricci - Actividad 5
+Web con Reflex To' Ricci - Actividad 5
+
 Este proyecto consiste en el desarrollo de una landing page utilizando el framework Reflex. El objetivo principal fue reinterpretar un diseño profesional y llevarlo al código aplicando componentes de Python para el frontend.
 
 -- Instrucciones --
