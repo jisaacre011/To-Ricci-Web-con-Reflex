@@ -1,15 +1,12 @@
-# Entorno virtual
-venv/
+# Reflex
+.web/
+.states/
+rxconfig.py.bak
 
 # Python
 __pycache__/
 *.py[cod]
-*.pyo
-
-# Reflex
-.reflex/
-.web/
-
-# Sistema
-.DS_Store
-Thumbs.db
+*$py.class
+venv/
+.venv/
+.env
