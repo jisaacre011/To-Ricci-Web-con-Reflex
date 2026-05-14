@@ -1,6 +1,15 @@
-*.py[cod]
-*.db
-.states
-assets/external/
+# Entorno virtual
+venv/
+
+# Python
 __pycache__/
-.web
+*.py[cod]
+*.pyo
+
+# Reflex
+.reflex/
+.web/
+
+# Sistema
+.DS_Store
+Thumbs.db
