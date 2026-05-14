@@ -1,0 +1,87 @@
+/* ============================================================
+   assets/styles.css — Cápsula Landing Page
+   Coloca este archivo en: assets/styles.css
+   ============================================================ */
+
+/* FLIP CARD */
+.card {
+  perspective: 1200px;
+  width: 100%;
+  cursor: pointer;
+  min-height: 380px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* HERO — animación letra por letra */
+.hero-title {
+  line-height: 1.1;
+}
+
+.hero-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: revealLetter 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes revealLetter {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ELIMINAR OUTLINE FEOS en botones */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #E8C47C44;
+}
+
+/* INPUT FOCUS */
+input:focus {
+  outline: none;
+  border-color: #E8C47C !important;
+}
+
+/* RESPONSIVE — grid a 1 columna en móvil */
+@media (max-width: 768px) {
+  .card {
+    grid-column: span 1 !important;
+  }
+}
